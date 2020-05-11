@@ -1,9 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/xita/syscovid/app/controllers/main_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/main_controller.rb": {
         "lines": [
           1,
+          1,
+          null,
+          null,
           1,
           null,
           null
