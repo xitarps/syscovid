@@ -43,6 +43,8 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
   # Use rspec to TDD
   gem 'rspec-rails', '~> 4.0.0'
+  # Use factory bot to TDD
+  gem 'factory_bot_rails'
 end
 
 group :development do
