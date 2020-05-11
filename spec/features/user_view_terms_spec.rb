@@ -9,9 +9,9 @@ feature 'view terms' do
       visit terms_path
 
       # Assert
-      expect(page).to have_content('Termos')
-      expect(page).to have_content('Art')
-      expect(page).to have_content('Voltar')
+      expect(page).to have_content(I18n.t(:terms).capitalize)
+      expect(page).to have_content(I18n.t(:art).capitalize)
+      expect(page).to have_content(I18n.t(:back).capitalize)
     end
   end
 end
