@@ -1,0 +1,80 @@
+require:
+  - rubocop-rails
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  TargetRubyVersion: 2.7
+  Exclude:
+    - 'app/jobs/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'node_modules/**/*'
+    - 'config/spring.rb'
+    - 'config/puma.rb'
+    - 'config/initializers/*'
+    - 'config/environments/*'
+    - 'config/application.rb'
+    - 'spec/features/*'
+    - 'test/*'
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MultilineIfModifier:
+  Enabled: false
+
+Layout/ArgumentAlignment:
+  Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'feature', 'scenario', 'let']
+  Enabled: true
+
+Layout/LineLength:
+  Max: 80
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+
+##
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+  
+Lint/RaiseException:
+  Enabled: true
+  
+Lint/StructNewOverride:
+  Enabled: true
+  
+Style/ExponentialNotation:
+  Enabled: true
+  
+Style/HashEachMethods:
+  Enabled: true
+  
+Style/HashTransformKeys:
+  Enabled: true
+  
+Style/HashTransformValues:
+  Enabled: true

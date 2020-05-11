@@ -47,6 +47,8 @@ group :development, :test do
   gem 'factory_bot_rails'
   # Use factory bot to TDD
   gem 'simplecov'
+  # Use factory bot to TDD
+  gem 'rubocop-rails'
 end
 
 group :development do
