@@ -2,8 +2,9 @@
 <%= image_tag('logo', alt: 'logo', height: "100", width: "100") %>
 <%= image_tag('logo', alt: 'logo', height: "100", width: "100") %>
 
-<p>Explicação sobre o que é o site...<p>
+<p><%= t(:about_site) %></p>
 
-<p><%= link_to 'Clique aqui para visualizar termos', terms_path %></p>
-<p><%= link_to 'Já sou cadastrado', '#' %></p>
-<p><%= link_to 'Novo usuário', '#' %></p>
+<p><%= link_to t(:view_terms).capitalize, terms_path %></p>
+<p><%= link_to t(:already_registered).capitalize, '#' %></p>
+
+<p><%= link_to t(:new_user).capitalize, '#' %></p>

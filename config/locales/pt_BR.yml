@@ -103,6 +103,10 @@ pt-BR:
   user: 'usuário'
   terms: termos
   art: 'art'
+  new_user: 'novo usuario'
+  already_registered: 'já sou cadastrado'
+  view_terms: 'clique aqui para visualizar os termos'
+  about_site: 'Texto sobre o site...'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
