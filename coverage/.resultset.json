@@ -1,17 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/fabi/syscovid/app/controllers/main_controller.rb": {
+      "/home/xita/syscovid/app/controllers/main_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1589231328
+    "timestamp": 1589232289
   }
 }
