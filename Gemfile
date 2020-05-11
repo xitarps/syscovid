@@ -45,6 +45,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   # Use factory bot to TDD
   gem 'factory_bot_rails'
+  # Use factory bot to TDD
+  gem 'simplecov'
 end
 
 group :development do
