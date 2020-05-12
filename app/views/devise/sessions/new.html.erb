@@ -1,0 +1,51 @@
+<div class="container">
+  <div class='row center'>
+    <h2><%= t(:log_in).capitalize %></h2>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.label :email , t(:email).capitalize %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t(:email_example) %>
+    </div>
+    <div class="field">
+      <%= f.label :password , t(:password).capitalize%><br />
+      <%= f.password_field :password, autocomplete: "current-password", placeholder:'*******' %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+    <div>
+      <div class="field">
+
+        
+        <h6>
+          <%= f.label :remember_me , t(:remember_me).capitalize do %>
+            <%= t(:remember_me).capitalize %>
+            <br>
+            <%= f.check_box :remember_me, type:"checkbox" %>
+            <span>
+
+          <% end%>
+        </h6>
+      </div>
+    </div>
+      
+    <% end %>
+    <span>
+
+
+
+    <div class='row center'>
+        <%= f.button t(:log_in).capitalize , class: "white-text actions btn-large waves-effect"%>
+    </div>
+
+
+    
+
+
+  <% end %>
+  
+  <%= render "devise/shared/links" %>
+
+</div>
+
+

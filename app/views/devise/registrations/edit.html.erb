@@ -1,0 +1,70 @@
+<h4><%= t(:edit).capitalize%> <%= t(resource_name.to_s) %></h4>
+
+<% @countries = Country.new.list_countries %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email , t(:email).capitalize%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t(:email_example) %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div><%= t(:currently_waiting_confirmation_for).capitalize%>: <%= resource.unconfirmed_email %></div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :password ,t(:password).capitalize%> <i>(<%= t(:leave_blank_dont_want_change).capitalize%>)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: '******' %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> <%= t(:characters_minimum).capitalize %></em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, t(:password_confirmation).capitalize %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '******' %>
+  </div>
+
+
+  <div>
+    <%= f.label :country, t(:country).capitalize %><br/>
+    <%= f.select(:country, @countries, {include_blank: t(:choose_country)}, { :style => 'display: block; margin-top: 0em;' }) %>
+  </div>
+
+  <div>
+    <%= f.label :user_zip_code, t(:user_zip_code) %><br/>
+    <%= f.text_field :user_zip_code, placeholder: '01234567', value: f.object.user_zip_code.upcase, onkeyup: "this.value = this.value.toUpperCase();" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :current_password, t(:current_password).capitalize %> <i>(<%= t(:current_password_needed).capitalize %>)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", placeholder: '******' %>
+  </div>
+
+  <div class='row center'>
+    <div class="actions btn waves-effect">
+      <%= f.submit t(:to_update).capitalize, class: "white-text" %>
+    </div>
+  </div>
+
+<% end %>
+
+<h5><%= t(:cancel_account).capitalize %></h5>
+
+<p>
+<div class='row center'>
+<%= t(:unhappy).capitalize%>? 
+</div>
+<div class='row center'>
+    <div class="actions btn waves-effect">
+    <%= button_to t(:cancel_account).capitalize, registration_path(resource_name), data: { confirm: t(:confirm_action).capitalize }, method: :delete, class: "white-text" %>
+      
+    </div>
+  </div>
+</p>
+
+<!--<%= link_to t(:back).capitalize, :back %>-->
