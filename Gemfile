@@ -39,6 +39,12 @@ gem 'material_icons'
 # https://github.com/heartcombo/devise
 gem 'devise'
 
+# https://lostisland.github.io/faraday/
+gem 'faraday'
+
+## https://github.com/dgilperez/validates_zipcode
+gem 'validates_zipcode'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
