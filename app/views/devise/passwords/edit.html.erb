@@ -1,0 +1,28 @@
+<h2><%= t(:change_password).capitalize%></h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="field">
+    <%= f.label :password, t(:new_password).capitalize %><br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> <%= t(:characters_minimum) %>)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", placeholder: '******' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, t(:confirm_new_password).capitalize %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '******' %>
+  </div>
+
+  <div class='row center'>
+    <div class="actions btn waves-effect">
+      <%= f.submit t(:to_change_password).capitalize , class: "white-text"%>
+    </div>
+  </div>
+
+<% end %>
+
+<%= render "devise/shared/links" %>

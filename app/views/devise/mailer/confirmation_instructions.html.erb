@@ -1,0 +1,5 @@
+<p><%= t(:welcome).capitalize%> <%= @email %>!</p>
+
+<p><%= t(:you_can_confirm_your_account_email_through_the_link_below).capitalize%>:</p>
+
+<p><%= link_to t(:account_confirmation).capitalzie, confirmation_url(@resource, confirmation_token: @token) %></p>

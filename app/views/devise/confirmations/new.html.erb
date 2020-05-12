@@ -1,0 +1,16 @@
+<h2><%= t(:resend_confirmation_instructions).capitalize %></h2>
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email , t(:email).capitalize%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: t(:email_example) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t(:resend_confirmation_instructions).capitalize %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

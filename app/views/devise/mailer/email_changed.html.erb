@@ -1,0 +1,7 @@
+<p><%= t(:hello).capitalize%> <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+  <p><%= t(:email_changed_notify).capitalize%> <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+  <p><%= t(:email_changed_notify).capitalize%> <%= @resource.email %>.</p>
+<% end %>
