@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'user view homepage' do
+feature 'view homepage' do
   context 'user' do
     it 'successfully' do
       # Arrange

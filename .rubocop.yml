@@ -26,6 +26,8 @@ AllCops:
     - 'Gemfile'
     - 'spec/spec_helper.rb'
     - 'spec/rails_helper.rb'
+    - 'spec/factories/social_distances.rb'
+    - 'app/models/country.rb'
 
 Style/ClassAndModuleChildren:
   Enabled: false

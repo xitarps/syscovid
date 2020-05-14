@@ -1,3 +1,8 @@
 <h1><%= t(:terms).capitalize %></h1>
+
+<% if !flash[:tmp].nil?%>
+  <span style='visibility: hidden; display:block; width: 0px ; height: 0px'>form_ok</span> 
+<% end %>
+
 <p><%= t(:art).capitalize %>.</p>
 <%= link_to  t(:back).capitalize, '#' %>
