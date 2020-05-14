@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_030337) do
+ActiveRecord::Schema.define(version: 2020_05_12_235037) do
+
+  create_table "social_distances", force: :cascade do |t|
+    t.integer "how_many_residents"
+    t.integer "residence_type"
+    t.integer "bedrooms"
+    t.integer "bathrooms"
+    t.integer "rooms"
+    t.integer "many_contacts"
+    t.integer "been_outdoor"
+    t.integer "many_times_outdoor"
+    t.integer "supermarket"
+    t.integer "pharmacy"
+    t.integer "health_service"
+    t.integer "commerce"
+    t.integer "market"
+    t.integer "workplace"
+    t.integer "other_places"
+    t.integer "public_transportation"
+    t.integer "many_transportations"
+    t.integer "bus"
+    t.integer "subway"
+    t.integer "train"
+    t.integer "transport_apps"
+    t.integer "car"
+    t.integer "bicycle"
+    t.integer "taxi"
+    t.integer "other_transportations"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_social_distances_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,4 +61,5 @@ ActiveRecord::Schema.define(version: 2020_05_12_030337) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "social_distances", "users"
 end
