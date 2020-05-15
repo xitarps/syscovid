@@ -147,6 +147,9 @@ pt-BR:
   checked_message: 'valor invalido, utilize o checkbox'
   one_to_99_message: 'valor invalido, digitar numero entre 1 e 99'
   not_found_in_database: Inválido email ou senha.
+  social_distance_research: 'Pesquisa de distanciamento social'
+  self_test_covid: 'Auto avaliação(covid-19)'
+  how_is_my_vicinity: 'Monitoramento de minha região'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'

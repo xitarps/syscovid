@@ -7,19 +7,20 @@
 
 
 
+<%if false%>
+  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    <!---<p class="row center">
+      <%= link_to t(:sign_up).capitalize, new_registration_path(resource_name), class: '' %><br />
+    <p>
+    -->
 
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <!---<p class="row center">
-    <%= link_to t(:sign_up).capitalize, new_registration_path(resource_name), class: '' %><br />
-  <p>
-  -->
-
-<div class='row center'>
-  <div class="actions btn waves-effect">
-    <%= link_to t(:sign_up).capitalize, new_registration_path(resource_name), class: 'white-text' %>
+  <div class='row center'>
+    <div class="actions btn waves-effect">
+      <%= link_to t(:sign_up).capitalize, new_registration_path(resource_name), class: 'white-text' %>
+    </div>
   </div>
-</div>
 
+  <% end %>
 <% end %>
 
 
