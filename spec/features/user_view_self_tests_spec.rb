@@ -4,6 +4,7 @@ feature 'view self tests' do
   context 'user' do
     it 'successfully' do
       # Arrange
+      
     
       # Act
       visit new_self_test_path

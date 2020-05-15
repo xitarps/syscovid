@@ -2,6 +2,7 @@
 
 <%= link_to 'Sair' ,destroy_user_session_path, method: 'DELETE'%>
 
+<p><%= t(:user).capitalize %>: <%= current_user.email %><p>
 
 <%= form_with url: self_tests_path, model: @self_test,  local: true do |f| %>
 
@@ -191,3 +192,4 @@
 
   <%= f.submit t(:save).capitalize %>
 <% end %>
+

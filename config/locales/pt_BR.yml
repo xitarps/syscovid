@@ -36,6 +36,7 @@ pt-BR:
   didnt_receive_email_instructions: 'não recebeu o email com instruções?'
   didnt_receive_unlock_instructions: 'não recebeu as instruções para desbloquear?'
   sign_in_with: 'entrar com'
+  signed_in: Login efetuado com sucesso.
   leave_blank_dont_want_change: 'mantenha vazio caso não queira alterar'
   characters_minimum: 'caracteres no mínimo'
   current_password_needed: 'precisamos de sua senha atual para confirmar as mudanças'
@@ -140,14 +141,11 @@ pt-BR:
   blank: 'está com campo vazio, favor corrigir'
   checked_message: 'valor invalido, utilize o checkbox'
   one_to_99_message: 'valor invalido, digitar numero entre 1 e 99'
-
-  #traducoes da tela de autoavaliacao
   any_symptoms: 'apresenta algum destes sintomas?'
   how_long_have_symptoms: 'a quanto tempo tem estes sintomas?'
   additional_symptoms: 'tem sintomas adicionais?'
   sought_health_service: 'procurou servico de saude?'
   did_covid_test: 'fez teste para diagnostico de covid 19?'
-  
   fever: 'febre(acima de 37 C' 
   shortness_of_breath: 'falta de ar' 
   tiredness: 'cancaco' 
@@ -156,12 +154,10 @@ pt-BR:
   vomit: 'vomito' 
   diarrhea: 'diarreia' 
   feel_fine: 'estou bem'
-
   how_long_feeling: 'ha quanto tempo tem estes sintomas?'
   first_week_range: '0 a 7 dias'
   second_week_range: '8 a 14 dias'
   more_two_weeks_range: 'mais de 14 dias'
-
   diabetes: 'diabetes'
   high_pressure: 'pressao alta'
   asthma_bronchitis: 'asma/bronquite'
@@ -172,21 +168,18 @@ pt-BR:
   immunosuppression: 'imunosupressao'
   other_symptoms: 'outros sintomas'
   no_additional_symptoms: 'nao tenho sintomas adicionais'
-
   health_service_unit: 'UBS/SUS'
   clinic: 'consultorio'
   ambulatory: 'ambulatorio'
   emergency_room: 'pronto socorro'
   didnt_look_for_help: 'nao'
   covid_test: 'fez teste para diagnostico de COVID-19?'
-
   less_than_seven_days: 'sim, a menos de 7 dias'
   more_than_seven_days: 'sim, a mais de 7 dias'
   no_test_covid: 'nao'
-
   flu: 'influenza/gripe'
   covid: 'COVID-19'
-
+  not_found_in_database: Inválido email ou senha.
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
