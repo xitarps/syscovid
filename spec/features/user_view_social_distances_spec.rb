@@ -22,6 +22,19 @@ feature 'view social distances' do
       expect(page).to have_content(I18n.t(:many_transportations).capitalize)
       expect(page).to have_content(I18n.t(:transport_type).capitalize)
       expect(page).to have_content(I18n.t(:bus).capitalize)
+      expect(page).to have_css("input[value='#{I18n.t(:save).capitalize}']")
+    end
+    it 'cannot be blank' do
+      # Arrange
+    
+      # Act
+      visit root_path
+      click_on I18n.t(:new_user).capitalize
+  
+      click_on I18n.t(:save).capitalize
+
+      # Assert
+      expect(page).to have_content(I18n.t(:blank))
     end
   end
 end

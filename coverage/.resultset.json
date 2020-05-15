@@ -341,12 +341,39 @@
         "lines": [
           1,
           1,
+          null,
           1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
           null,
           null
         ]
+      },
+      "/home/fabi/syscovid/app/controllers/results_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1589512923
+    "timestamp": 1589515740
   }
 }
