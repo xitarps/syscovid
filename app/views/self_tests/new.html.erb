@@ -1,3 +1,193 @@
 <h1>Self test new form</h1>
 
 <%= link_to 'Sair' ,destroy_user_session_path, method: 'DELETE'%>
+
+
+<%= form_with url: self_tests_path, model: @self_test,  local: true do |f| %>
+
+  <p><%= f.label '', t(:any_symptoms).capitalize %></p>
+
+  <%= f.label :fever , t(:fever).capitalize do %>
+    <%= t(:fever).capitalize %>
+    <br>
+    <%= f.check_box :fever, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :shortness_of_breath , t(:shortness_of_breath).capitalize do %>
+    <%= t(:shortness_of_breath).capitalize %>
+    <br>
+    <%= f.check_box :shortness_of_breath, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :tiredness , t(:tiredness).capitalize do %>
+    <%= t(:tiredness).capitalize %>
+    <br>
+    <%= f.check_box :tiredness, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :cough , t(:cough).capitalize do %>
+    <%= t(:cough).capitalize %>
+    <br>
+    <%= f.check_box :cough, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :sore_throat , t(:sore_throat).capitalize do %>
+    <%= t(:sore_throat).capitalize %>
+    <br>
+    <%= f.check_box :sore_throat, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :vomit , t(:vomit).capitalize do %>
+    <%= t(:vomit).capitalize %>
+    <br>
+    <%= f.check_box :vomit, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :diarrhea , t(:diarrhea).capitalize do %>
+    <%= t(:diarrhea).capitalize %>
+    <br>
+    <%= f.check_box :diarrhea, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :feel_fine , t(:feel_fine).capitalize do %>
+    <%= t(:feel_fine).capitalize %>
+    <br>
+    <%= f.check_box :feel_fine, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <br>
+
+  <%= f.label :how_long_feeling, t(:how_long_feeling).capitalize %>
+  <%= f.select(:how_long_feeling, [[t(:first_week_range),0], [t(:second_week_range),1], [t(:more_two_weeks_range),2]], {include_blank: 'A quanto tempo'}, { :style => 'display: block; margin-top: 0em;' }) %>
+ 
+  <br>
+
+  <p><%= f.label '', t(:additional_symptoms).capitalize %></p>
+
+  <%= f.label :diabetes , t(:diabetes).capitalize do %>
+    <%= t(:diabetes).capitalize %>
+    <br>
+    <%= f.check_box :diabetes, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :high_pressure , t(:high_pressure).capitalize do %>
+    <%= t(:high_pressure).capitalize %>
+    <br>
+    <%= f.check_box :high_pressure, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :asthma_bronchitis , t(:asthma_bronchitis).capitalize do %>
+    <%= t(:asthma_bronchitis).capitalize %>
+    <br>
+    <%= f.check_box :asthma_bronchitis, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :heart_disease , t(:heart_disease).capitalize do %>
+    <%= t(:heart_disease).capitalize %>
+    <br>
+    <%= f.check_box :heart_disease, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :chronic_respiratory_disease , t(:chronic_respiratory_disease).capitalize do %>
+    <%= t(:chronic_respiratory_disease).capitalize %>
+    <br>
+    <%= f.check_box :chronic_respiratory_disease, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :chronic_kidney_disease , t(:chronic_kidney_disease).capitalize do %>
+    <%= t(:chronic_kidney_disease).capitalize %>
+    <br>
+    <%= f.check_box :chronic_kidney_disease, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :depression , t(:depression).capitalize do %>
+    <%= t(:depression).capitalize %>
+    <br>
+    <%= f.check_box :depression, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :immunosuppression , t(:immunosuppression).capitalize do %>
+    <%= t(:immunosuppression).capitalize %>
+    <br>
+    <%= f.check_box :immunosuppression, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :other_symptoms , t(:other_symptoms).capitalize do %>
+    <%= t(:other_symptoms).capitalize %>
+    <br>
+    <%= f.check_box :other_symptoms, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :no_additional_symptoms , t(:no_additional_symptoms).capitalize do %>
+    <%= t(:no_additional_symptoms).capitalize %>
+    <br>
+    <%= f.check_box :no_additional_symptoms, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <br>
+
+  <p><%= f.label '', t(:sought_health_service).capitalize %></p>
+
+  <%= f.label :health_service_unit , t(:health_service_unit).capitalize do %>
+    <%= t(:health_service_unit).capitalize %>
+    <br>
+    <%= f.check_box :health_service_unit, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :clinic , t(:clinic).capitalize do %>
+    <%= t(:clinic).capitalize %>
+    <br>
+    <%= f.check_box :clinic, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :ambulatory , t(:ambulatory).capitalize do %>
+    <%= t(:ambulatory).capitalize %>
+    <br>
+    <%= f.check_box :ambulatory, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <%= f.label :emergency_room , t(:emergency_room).capitalize do %>
+    <%= t(:emergency_room).capitalize %>
+    <br>
+    <%= f.check_box :emergency_room, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  
+  <%= f.label :didnt_look_for_help , t(:didnt_look_for_help).capitalize do %>
+    <%= t(:didnt_look_for_help).capitalize %>
+    <br>
+    <%= f.check_box :didnt_look_for_help, type:"checkbox" %>
+    <span>
+  <% end %>
+
+  <br>
+  
+  <%= f.label :covid_test, t(:covid_test).capitalize %>
+  <%= f.select(:covid_test, [[t(:less_than_seven_days),0], [t(:more_than_seven_days),1], [t(:no_test_covid),2]], {include_blank: 'A quanto tempo'}, { :style => 'display: block; margin-top: 0em;' }) %>
+
+  <br>
+
+  <%= f.submit t(:save).capitalize %>
+<% end %>

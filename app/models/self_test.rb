@@ -1,0 +1,3 @@
+class SelfTest < ApplicationRecord
+  belongs_to :user
+end

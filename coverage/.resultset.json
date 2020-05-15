@@ -187,6 +187,13 @@
           null
         ]
       },
+      "/home/fabi/syscovid/app/models/self_test.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/home/fabi/syscovid/app/controllers/social_distances_controller.rb": {
         "lines": [
           1,
@@ -341,12 +348,39 @@
         "lines": [
           1,
           1,
+          null,
           1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
           null,
           null
         ]
+      },
+      "/home/fabi/syscovid/app/controllers/results_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1589427081
+    "timestamp": 1589515740
   }
 }
