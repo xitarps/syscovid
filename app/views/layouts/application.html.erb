@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= javascript_tag "M.toast({html: '#{notice}'}, 4000)" unless notice.nil? %>
+    <%= javascript_tag "M.toast({html: '#{alert}'}, 4000)" unless alert.nil? %>
 
     <%= yield %>
   </body>

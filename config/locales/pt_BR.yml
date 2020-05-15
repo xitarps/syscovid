@@ -36,6 +36,7 @@ pt-BR:
   didnt_receive_email_instructions: 'não recebeu o email com instruções?'
   didnt_receive_unlock_instructions: 'não recebeu as instruções para desbloquear?'
   sign_in_with: 'entrar com'
+  signed_in: Login efetuado com sucesso.
   leave_blank_dont_want_change: 'mantenha vazio caso não queira alterar'
   characters_minimum: 'caracteres no mínimo'
   current_password_needed: 'precisamos de sua senha atual para confirmar as mudanças'
@@ -145,6 +146,7 @@ pt-BR:
   blank: 'está com campo vazio, favor corrigir'
   checked_message: 'valor invalido, utilize o checkbox'
   one_to_99_message: 'valor invalido, digitar numero entre 1 e 99'
+  not_found_in_database: Inválido email ou senha.
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
