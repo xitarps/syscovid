@@ -32,7 +32,7 @@ end
 def sign_in
   user = FactoryBot.create(:user)
   visit new_user_session_path
-  fill_in 'E-mail', :with => user.email
-  fill_in 'Senha', :with => user.password
-  click_button 'Entrar'
+  fill_in I18n.t(:email).capitalize, :with => user.email
+  fill_in I18n.t(:password).capitalize, :with => user.password
+  click_button I18n.t(:log_in).capitalize
 end
