@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :social_distances, only: %i[new create show]
   resources :self_tests, only: %i[new create]
   resources :results, only: %i[index]
+  resources :users_dashboards, only: %i[index]
 end
