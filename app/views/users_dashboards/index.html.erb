@@ -1,0 +1,9 @@
+<h2>User Dashboards</h2>
+
+<p><%= t(:user).capitalize %>: <%= current_user.email %><p>
+
+<%= link_to 'Sair' ,destroy_user_session_path, method: 'DELETE'%>
+
+<p><%= link_to t(:social_distance_research).capitalize, new_social_distance_path %></p>
+<p><%= link_to t(:self_test_covid).capitalize, new_self_test_path %></p>
+<p><%= link_to t(:how_is_my_vicinity).capitalize, '#' %></p> 
