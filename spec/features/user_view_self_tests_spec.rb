@@ -4,7 +4,7 @@ feature 'view self tests' do
   context 'user' do
     it 'successfully' do
       # Arrange
-      
+      sign_in
     
       # Act
       visit new_self_test_path
@@ -13,7 +13,7 @@ feature 'view self tests' do
       expect(page).to have_content(I18n.t(:any_symptoms).capitalize)
       expect(page).to have_content(I18n.t(:how_long_have_symptoms).capitalize)
       expect(page).to have_content(I18n.t(:additional_symptoms).capitalize)
-      expect(page).to have_content(I18n.t(:did_covid_test).capitalize)
+      expect(page).to have_content(I18n.t(:covid_test).capitalize)
       expect(page).to have_content(I18n.t(:fever).capitalize)
       expect(page).to have_content(I18n.t(:shortness_of_breath).capitalize)
       expect(page).to have_content(I18n.t(:tiredness).capitalize)
@@ -42,13 +42,17 @@ feature 'view self tests' do
       expect(page).to have_content(I18n.t(:emergency_room).capitalize)
       expect(page).to have_content(I18n.t(:didnt_look_for_help).capitalize)
       expect(page).to have_content(I18n.t(:covid_test).capitalize)
-      expect(page).to have_content(I18n.t(:flu).capitalize)
-      expect(page).to have_content(I18n.t(:covid).capitalize)
       expect(page).to have_content(I18n.t(:less_than_seven_days).capitalize)
       expect(page).to have_content(I18n.t(:more_than_seven_days).capitalize)
       expect(page).to have_content(I18n.t(:no_test_covid).capitalize)
-
-      expect(page).to have_content(I18n.t(:save).capitalize)
     end
   end
+end
+
+def sign_in
+  user = FactoryBot.create(:user)
+  visit new_user_session_path
+  fill_in I18n.t(:email).capitalize, :with => user.email
+  fill_in I18n.t(:password).capitalize, :with => user.password
+  click_button I18n.t(:log_in).capitalize
 end

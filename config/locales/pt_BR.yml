@@ -145,7 +145,6 @@ pt-BR:
   how_long_have_symptoms: 'a quanto tempo tem estes sintomas?'
   additional_symptoms: 'tem sintomas adicionais?'
   sought_health_service: 'procurou servico de saude?'
-  did_covid_test: 'fez teste para diagnostico de covid 19?'
   fever: 'febre(acima de 37 C' 
   shortness_of_breath: 'falta de ar' 
   tiredness: 'cancaco' 
@@ -154,7 +153,7 @@ pt-BR:
   vomit: 'vomito' 
   diarrhea: 'diarreia' 
   feel_fine: 'estou bem'
-  how_long_feeling: 'ha quanto tempo tem estes sintomas?'
+  how_long_feeling: 'a quanto tempo tem estes sintomas?'
   first_week_range: '0 a 7 dias'
   second_week_range: '8 a 14 dias'
   more_two_weeks_range: 'mais de 14 dias'
@@ -179,6 +178,8 @@ pt-BR:
   no_test_covid: 'nao'
   flu: 'influenza/gripe'
   covid: 'COVID-19'
+  how_long: 'a quanto tempo'
+  form_self_test: 'formulario de autoavaliação'
   not_found_in_database: Inválido email ou senha.
   errors:
       messages:
@@ -223,6 +224,9 @@ pt-BR:
         bicycle: 'bicileta'
         taxi: 'taxi'
         other_transportations: 'outros'
+      self_test:
+        how_long_feeling: 'a quanto tempo tem estes sintomas?'
+        covid_test: 'fez teste para diagnostico de COVID-19'
     errors:
       messages:
         inclusion: 'não selecionada'

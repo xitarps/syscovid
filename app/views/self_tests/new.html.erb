@@ -1,11 +1,14 @@
-<h1>Self test new form</h1>
-
-<%= link_to 'Sair' ,destroy_user_session_path, method: 'DELETE'%>
+<h1><%= t(:form_self_test).capitalize %></h1>
 
 <p><%= t(:user).capitalize %>: <%= current_user.email %><p>
 
-<%= form_with url: self_tests_path, model: @self_test,  local: true do |f| %>
+<% if @self_test.errors.any? %>
+  <% @self_test.errors.full_messages.each do |message| %>
+    <p><%= (message).capitalize  %></p>
+  <% end %>
+<% end %>
 
+<%= form_with url: self_tests_path, model: @self_test,  local: true do |f| %>
   <p><%= f.label '', t(:any_symptoms).capitalize %></p>
 
   <%= f.label :fever , t(:fever).capitalize do %>
@@ -67,7 +70,7 @@
   <br>
 
   <%= f.label :how_long_feeling, t(:how_long_feeling).capitalize %>
-  <%= f.select(:how_long_feeling, [[t(:first_week_range),0], [t(:second_week_range),1], [t(:more_two_weeks_range),2]], {include_blank: 'A quanto tempo'}, { :style => 'display: block; margin-top: 0em;' }) %>
+  <%= f.select(:how_long_feeling, [[t(:first_week_range).capitalize, 0], [t(:second_week_range).capitalize, 1], [t(:more_two_weeks_range).capitalize, 2]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
  
   <br>
 
@@ -186,10 +189,9 @@
   <br>
   
   <%= f.label :covid_test, t(:covid_test).capitalize %>
-  <%= f.select(:covid_test, [[t(:less_than_seven_days),0], [t(:more_than_seven_days),1], [t(:no_test_covid),2]], {include_blank: 'A quanto tempo'}, { :style => 'display: block; margin-top: 0em;' }) %>
+  <%= f.select(:covid_test, [[t(:less_than_seven_days).capitalize ,0], [t(:more_than_seven_days).capitalize ,1], [t(:no_test_covid).capitalize ,2]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
 
   <br>
 
   <%= f.submit t(:save).capitalize %>
 <% end %>
-

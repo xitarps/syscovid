@@ -28,6 +28,7 @@ AllCops:
     - 'spec/rails_helper.rb'
     - 'spec/factories/social_distances.rb'
     - 'app/models/country.rb'
+    - 'spec/factories/self_tests.rb'
 
 Style/ClassAndModuleChildren:
   Enabled: false
