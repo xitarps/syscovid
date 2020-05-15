@@ -4,7 +4,6 @@
   <% @social_distance.errors.full_messages.each do |message| %>
     <p><%= message.capitalize %></p>
   <% end %>
-
 <% end %>
 
 <%= form_with url: social_distances_path, model: @social_distance, method: 'POST', local: true do |f| %>
