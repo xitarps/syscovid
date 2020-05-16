@@ -6,6 +6,6 @@ FactoryBot.define do
     age { 13 }
     sequence(:name) { |n| "user-test-#{n} da silva" }
     gender { 1 }
-    user_zip_code { '01536000' }
+    user_zip_code { '01001000' }
   end
 end
