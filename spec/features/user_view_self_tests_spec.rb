@@ -41,10 +41,10 @@ feature 'view self tests' do
       expect(page).to have_content(I18n.t(:ambulatory).capitalize)
       expect(page).to have_content(I18n.t(:emergency_room).capitalize)
       expect(page).to have_content(I18n.t(:didnt_look_for_help).capitalize)
-      expect(page).to have_content(I18n.t(:covid_test).capitalize)
+      expect(page).to have_content(I18n.t(:no_test_covid).capitalize)
       expect(page).to have_content(I18n.t(:less_than_seven_days).capitalize)
       expect(page).to have_content(I18n.t(:more_than_seven_days).capitalize)
-      expect(page).to have_content(I18n.t(:no_test_covid).capitalize)
+      expect(page).to have_content(I18n.t(:covid_test).capitalize)
     end
     it 'not logged' do
       # Arrange
