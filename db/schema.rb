@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_16_072043) do
+ActiveRecord::Schema.define(version: 2020_05_16_111508) do
 
   create_table "self_tests", force: :cascade do |t|
     t.integer "fever"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_072043) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "self_test_zip_code"
+    t.integer "result"
     t.index ["user_id"], name: "index_self_tests_on_user_id"
   end
 
