@@ -25,6 +25,7 @@ FactoryBot.define do
     emergency_room { 0 }
     didnt_look_for_help { 0 }
     covid_test { 0 }
+    self_test_zip_code { '01001000' }
     result { nil }
     user { nil }
   end

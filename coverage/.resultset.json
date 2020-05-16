@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/fabi/syscovid/app/models/user.rb": {
+      "/home/xita/syscovid/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -20,7 +20,7 @@
           null
         ]
       },
-      "/home/fabi/syscovid/app/models/country.rb": {
+      "/home/xita/syscovid/app/models/country.rb": {
         "lines": [
           1,
           null,
@@ -188,7 +188,7 @@
           null
         ]
       },
-      "/home/fabi/syscovid/app/controllers/social_distances_controller.rb": {
+      "/home/xita/syscovid/app/controllers/social_distances_controller.rb": {
         "lines": [
           1,
           1,
@@ -200,6 +200,7 @@
           5,
           2,
           2,
+          2,
           null,
           null,
           3,
@@ -224,17 +225,28 @@
           null,
           null,
           null,
+          null,
           1,
           5,
           null,
           null,
           1,
           5,
+          null,
+          null,
+          1,
+          5,
+          null,
+          3,
+          null,
+          null,
+          1,
+          2,
           null,
           null
         ]
       },
-      "/home/fabi/syscovid/app/models/social_distance.rb": {
+      "/home/xita/syscovid/app/models/social_distance.rb": {
         "lines": [
           1,
           1,
@@ -244,6 +256,8 @@
           null,
           1,
           null,
+          1,
+          null,
           null,
           1,
           null,
@@ -315,7 +329,7 @@
           null
         ]
       },
-      "/home/fabi/syscovid/app/controllers/main_controller.rb": {
+      "/home/xita/syscovid/app/controllers/main_controller.rb": {
         "lines": [
           1,
           1,
@@ -334,11 +348,12 @@
           6,
           6,
           6,
+          6,
           null,
           null
         ]
       },
-      "/home/fabi/syscovid/app/controllers/self_tests_controller.rb": {
+      "/home/xita/syscovid/app/controllers/self_tests_controller.rb": {
         "lines": [
           1,
           1,
@@ -412,12 +427,14 @@
           null
         ]
       },
-      "/home/fabi/syscovid/app/models/self_test.rb": {
+      "/home/xita/syscovid/app/models/self_test.rb": {
         "lines": [
           1,
           1,
           null,
           1,
+          1,
+          null,
           1,
           null,
           1,
@@ -498,7 +515,7 @@
           null
         ]
       },
-      "/home/fabi/syscovid/app/controllers/users_dashboards_controller.rb": {
+      "/home/xita/syscovid/app/controllers/users_dashboards_controller.rb": {
         "lines": [
           1,
           1,
@@ -507,7 +524,34 @@
           null
         ]
       },
-      "/home/fabi/syscovid/app/controllers/results_controller.rb": {
+      "/home/xita/syscovid/app/controllers/monitorings_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
+          3,
+          2,
+          1,
+          null,
+          null,
+          1,
+          10,
+          10,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/xita/syscovid/app/controllers/results_controller.rb": {
         "lines": [
           1,
           1,
@@ -534,6 +578,6 @@
         ]
       }
     },
-    "timestamp": 1589631737
+    "timestamp": 1589636783
   }
 }

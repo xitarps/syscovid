@@ -38,9 +38,10 @@ ActiveRecord::Schema.define(version: 2020_05_16_111508) do
     t.integer "emergency_room"
     t.integer "didnt_look_for_help"
     t.integer "covid_test"
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "self_test_zip_code"
     t.integer "result"
     t.index ["user_id"], name: "index_self_tests_on_user_id"
   end
@@ -71,9 +72,10 @@ ActiveRecord::Schema.define(version: 2020_05_16_111508) do
     t.integer "bicycle"
     t.integer "taxi"
     t.integer "other_transportations"
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "social_distance_zip_code"
     t.index ["user_id"], name: "index_social_distances_on_user_id"
   end
 

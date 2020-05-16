@@ -19,13 +19,13 @@ class SelfTestsController < ApplicationController
     params
       .require(:self_test)
       .permit(:fever, :shortness_of_breath, :tiredness, :cough, :sore_throat,
-              :vomit, :diarrhea, :feel_fine, :how_long_feeling, :diabetes,
-              :high_pressure, :asthma_bronchitis, :heart_disease,
-              :chronic_respiratory_disease, :chronic_kidney_disease,
-              :depression, :immunosuppression, :other_symptoms,
-              :no_additional_symptoms, :health_service_unit, :clinic,
-              :ambulatory, :emergency_room, :didnt_look_for_help,
-              :covid_test).merge(user_id: current_user.id, result: nil)
+              :vomit, :feel_fine, :how_long_feeling, :diabetes, :high_pressure,
+              :asthma_bronchitis, :heart_disease, :depression, :other_symptoms,
+              :chronic_respiratory_disease, :chronic_kidney_disease, :diarrhea,
+              :immunosuppression, :no_additional_symptoms, :health_service_unit,
+              :clinic, :ambulatory, :emergency_room, :didnt_look_for_help,
+              :covid_test).merge(user_id: current_user.id, result: nil,
+                                 self_test_zip_code: current_user.user_zip_code)
   end
 
   def self_test_alert_fine
