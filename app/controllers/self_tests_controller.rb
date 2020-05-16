@@ -24,6 +24,6 @@ class SelfTestsController < ApplicationController
               :depression, :immunosuppression, :other_symptoms,
               :no_additional_symptoms, :health_service_unit, :clinic,
               :ambulatory, :emergency_room, :didnt_look_for_help,
-              :covid_test).merge(user_id: current_user.id)
+              :covid_test).merge(user_id: current_user.id, self_test_zip_code: current_user.user_zip_code)
   end
 end

@@ -1,8 +1,10 @@
 class SocialDistance < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   @checked_message = " - #{I18n.t(:checked_message).capitalize}"
   @one_to_99_message = " - #{I18n.t(:one_to_99_message).capitalize}"
+
+  validates :social_distance_zip_code, presence: true
 
   validates :how_many_residents,
   presence: true, format: { with: /\A[1-9]?[1-9]\z/,

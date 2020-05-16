@@ -184,6 +184,13 @@ pt-BR:
   social_distance_research: 'Pesquisa de distanciamento social'
   self_test_covid: 'Auto avaliação(covid-19)'
   how_is_my_vicinity: 'Monitoramento de minha região'
+  monitoring_page_text: 'Baseado no nº de casos registrados no mesmo CEP:'
+  green_zip_code: 'aparentemente sua região está normal.'
+  yellow_zip_code: 'Tem tido crescimento no nº de casos reportados de síndrome viral em sua regiao. Em caso de crescimento do nº de usuarios possivelmente enfermos, haverá alerta. Se possível, procure fazer nova autoavaliação diariamente.'
+  red_zip_code: 'Alerta! Redobre os cuidados! Procure não sair de casa desnecessariamente e refazer diariamente a auto avaliação.'
+  not_enough_data_yet: 'Sistema ainda sem dados de sua região...'
+  still_getting_infos: 'Estamos captando esses dados, não se preocupe.'
+  please_come_back_later: 'Favor, tentar novamente mais tarde'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'

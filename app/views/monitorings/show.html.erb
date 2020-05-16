@@ -1,0 +1,20 @@
+<h2>Monitoring</h2>
+
+<p><%= t(:user).capitalize %>: <%= current_user.email %></p>
+
+<p><%= t(:monitoring_page_text).capitalize %></p>
+
+<% if @alert=='not_enough' %>
+  <p><%= t(:not_enough_data_yet) %></p>
+  <p> <%= t(:still_getting_infos) %></p>
+  <div class="progress" style='width: 10vw;'>
+      <div class="indeterminate"></div>
+  </div>
+  <p> <%= t(:please_come_back_later) %></p>
+<% end %>
+
+<p><%= t(:green_zip_code).capitalize if @alert=='green' %></p>
+<p><%= t(:yellow_zip_code).capitalize if @alert=='yellow' %></p>
+<p><%= t(:red_zip_code).capitalize if @alert=='red' %></p>
+
+<%= link_to t(:back).capitalize ,users_dashboards_path %>

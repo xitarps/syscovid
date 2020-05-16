@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :self_tests, only: %i[new create]
   resources :results, only: %i[index]
   resources :users_dashboards, only: %i[index]
+  resources :monitorings, only: %i[show]
 end

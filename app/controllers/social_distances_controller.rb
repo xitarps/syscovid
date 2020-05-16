@@ -7,6 +7,7 @@ class SocialDistancesController < ApplicationController
   def create
     if user_signed_in? && (@social_distance.user_id = current_user.id)
       generate_flash
+      @social_distance.social_distance_zip_code = current_user.user_zip_code
       return redirect_to terms_path :index if @social_distance.save
 
     else
@@ -29,7 +30,7 @@ class SocialDistancesController < ApplicationController
               :commerce, :market, :workplace, :other_places,
               :public_transportation, :many_transportations, :bus, :subway,
               :train, :transport_apps, :car, :bicycle, :taxi,
-              :other_transportations)
+              :other_transportations).merge(social_distance_zip_code: generate_zip_code)
   end
 
   def generate_new_social_distance
@@ -38,5 +39,11 @@ class SocialDistancesController < ApplicationController
 
   def generate_flash
     flash[:tmp] = @social_distance if @social_distance.valid?
+  end
+
+  def generate_zip_code
+    return current_user.user_zip_code if user_signed_in?
+    
+    '01001000'
   end
 end
