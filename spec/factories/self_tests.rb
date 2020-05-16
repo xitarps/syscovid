@@ -1,30 +1,31 @@
 FactoryBot.define do
   factory :self_test do
-    fever { 1 }
-    shortness_of_breath { 1 }
-    tiredness { 1 }
-    cough { 1 }
-    sore_throat { 1 }
-    vomit { 1 }
-    diarrhea { 1 }
-    feel_fine { 1 }
-    how_long_feeling { 1 }
-    diabetes { 1 }
-    high_pressure { 1 }
-    asthma_bronchitis { 1 }
-    heart_disease { 1 }
-    chronic_respiratory_disease { 1 }
-    chronic_kidney_disease { 1 }
-    depression { 1 }
-    immunosuppression { 1 }
-    other_symptoms { 1 }
-    no_additional_symptoms { 1 }
-    health_service_unit { 1 }
-    clinic { 1 }
-    ambulatory { 1 }
-    emergency_room { 1 }
-    didnt_look_for_help { 1 }
-    covid_test { 1 }
+    fever { 0 }
+    shortness_of_breath { 0 }
+    tiredness { 0 }
+    cough { 0 }
+    sore_throat { 0 }
+    vomit { 0 }
+    diarrhea { 0 }
+    feel_fine { 0 }
+    how_long_feeling { 0 }
+    diabetes { 0 }
+    high_pressure { 0 }
+    asthma_bronchitis { 0 }
+    heart_disease { 0 }
+    chronic_respiratory_disease { 0 }
+    chronic_kidney_disease { 0 }
+    depression { 0 }
+    immunosuppression { 0 }
+    other_symptoms { 0 }
+    no_additional_symptoms { 0 }
+    health_service_unit { 0 }
+    clinic { 0 }
+    ambulatory { 0 }
+    emergency_room { 0 }
+    didnt_look_for_help { 0 }
+    covid_test { 0 }
+    result { nil }
     user { nil }
   end
 end
