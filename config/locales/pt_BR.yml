@@ -22,6 +22,10 @@ pt-BR:
   your_email: 'seu email'
   your_zip_code: 'seu cep'
   name: 'nome'
+  your_name: 'seu nome aqui'
+  nick_name: 'Nome/Apelido - Opcional'
+  gender: 'genero'
+  age: 'idade'
   save: 'salvar'
   return: 'voltar'
   modify: 'alterar'
@@ -205,6 +209,8 @@ pt-BR:
   alert_attention: 'procure/mantenha consultas com medico. Lembre-se de lavar as maos...'
   alert_critical: 'procure um hospital...'
   ops_something_wrong: 'ops... algo deu errado'
+  name_ivalid: 'nome invalido'
+  gender_invalid: 'genero invalido'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
@@ -222,6 +228,9 @@ pt-BR:
         user_zip_code: 'cep'
         country: 'nacionalidade'
         inclusion: 'inclusao'
+        age: 'idade'
+        name: 'nome'
+        gender: 'genero'
       social_distance:
         how_many_residents: 'numero de pessoas na sua casa'
         residence_type: 'tipo de moradia'

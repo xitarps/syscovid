@@ -5,6 +5,22 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <div>
+    <%= f.label :name, t(:name).capitalize %>
+    <em>(<%= t(:nick_name)%>)</em>
+    <%= f.text_field :name, placeholder: t(:your_name) %>
+  </div>
+
+  <div>
+    <%= f.label :age, t(:age).capitalize %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div>
+    <%= f.label :gender, t(:gender).capitalize %>
+    <%= f.select(:gender, [[t(:male),0], [t(:female),1]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
+  </div>
+
   <div class="field">
     <%= f.label :email , t(:email).capitalize%><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t(:email_example) %>
@@ -28,7 +44,6 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '******' %>
   </div>
 
-
   <div>
     <%= f.label :country, t(:country).capitalize %><br/>
     <%= f.select(:country, @countries, {include_blank: t(:choose_country)}, { :style => 'display: block; margin-top: 0em;' }) %>
@@ -38,7 +53,6 @@
     <%= f.label :user_zip_code, t(:user_zip_code) %><br/>
     <%= f.text_field :user_zip_code, placeholder: '01234567', value: f.object.user_zip_code.upcase, onkeyup: "this.value = this.value.toUpperCase();" %>
   </div>
-
 
   <div class="field">
     <%= f.label :current_password, t(:current_password).capitalize %> <i>(<%= t(:current_password_needed).capitalize %>)</i><br />

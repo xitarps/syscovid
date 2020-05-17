@@ -9,6 +9,21 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   
+  <div>
+    <%= f.label :name, t(:name).capitalize %>
+    <em>(<%= t(:nick_name)%>)</em>
+    <%= f.text_field :name, placeholder: t(:your_name) %>
+  </div>
+
+  <div>
+    <%= f.label :age, t(:age).capitalize %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div>
+    <%= f.label :gender, t(:gender).capitalize %>
+    <%= f.select(:gender, [[t(:male),0], [t(:female),1]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
+  </div>
 
   <div class="field">
     <%= f.label :email , t(:email).capitalize%><br />
@@ -37,7 +52,6 @@
     <%= f.label :password_confirmation ,t(:password_confirmation).capitalize%><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '******' %>
   </div>
-
 
   <div class='row center'>
     <%= f.button t(:sign_up).capitalize , class: "white-text actions btn waves-effect"%>
