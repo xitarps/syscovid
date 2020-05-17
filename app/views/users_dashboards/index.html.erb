@@ -1,5 +1,9 @@
 <h2>User Dashboards</h2>
 
+<% if !flash[:tmp].nil?%>
+  <span style='visibility: hidden; display:block; width: 0px ; height: 0px'>form_ok</span> 
+<% end %>
+
 <p><%= t(:user).capitalize %>: <%= current_user.email %><p>
 
 <%= link_to t(:logout) ,destroy_user_session_path, method: 'DELETE'%>
