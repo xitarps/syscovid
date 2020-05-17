@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/xita/syscovid/app/models/user.rb": {
+      "/home/fabi/syscovid/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -15,12 +15,25 @@
           1,
           null,
           1,
+          1,
+          1,
           null,
           1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
           null
         ]
       },
-      "/home/xita/syscovid/app/models/country.rb": {
+      "/home/fabi/syscovid/app/models/country.rb": {
         "lines": [
           1,
           null,
@@ -188,7 +201,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/controllers/social_distances_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/social_distances_controller.rb": {
         "lines": [
           1,
           1,
@@ -246,7 +259,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/models/social_distance.rb": {
+      "/home/fabi/syscovid/app/models/social_distance.rb": {
         "lines": [
           1,
           1,
@@ -329,7 +342,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/controllers/main_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/main_controller.rb": {
         "lines": [
           1,
           1,
@@ -353,7 +366,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/controllers/self_tests_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/self_tests_controller.rb": {
         "lines": [
           1,
           1,
@@ -427,7 +440,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/models/self_test.rb": {
+      "/home/fabi/syscovid/app/models/self_test.rb": {
         "lines": [
           1,
           1,
@@ -515,7 +528,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/controllers/users_dashboards_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/users_dashboards_controller.rb": {
         "lines": [
           1,
           1,
@@ -524,7 +537,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/controllers/monitorings_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/monitorings_controller.rb": {
         "lines": [
           1,
           1,
@@ -551,7 +564,7 @@
           null
         ]
       },
-      "/home/xita/syscovid/app/controllers/results_controller.rb": {
+      "/home/fabi/syscovid/app/controllers/results_controller.rb": {
         "lines": [
           1,
           1,
@@ -578,6 +591,6 @@
         ]
       }
     },
-    "timestamp": 1589675146
+    "timestamp": 1589687555
   }
 }

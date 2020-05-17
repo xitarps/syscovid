@@ -18,11 +18,11 @@ class User < ApplicationRecord
   validates :country, presence: true, inclusion: { in: @countries }
 
   validates :name, format: { with: /\A[a-zA-Z]?[a-zA-Z]{0,130}\z/,
-  message: @name_ivalid }
+                             message: @name_ivalid }
 
   validates :age, presence: true, format: { with: /\A[1-9]?[1-9]\z/,
-  message: @one_to_99_message }
+                                            message: @one_to_99_message }
 
   validates :gender, presence: true, format: { with: /\A[0-1]\z/,
-  message: @gender_invalid }
+                                               message: @gender_invalid }
 end

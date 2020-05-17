@@ -19,9 +19,9 @@ feature 'view login page' do
       sign_in
       # Act
       visit root_path
-      click_on I18n.t(:already_registered).capitalize
 
       # Assert
+      expect(page).not_to have_content(I18n.t(:already_registered).capitalize)
       expect(page).not_to have_content(I18n.t(:email).capitalize)
       expect(page).not_to have_content(I18n.t(:password).capitalize)
       expect(page).not_to have_content(I18n.t(:log_in).capitalize)
