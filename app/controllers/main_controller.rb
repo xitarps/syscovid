@@ -3,6 +3,9 @@ class MainController < ApplicationController
   end
 
   def index
+    puts '!!!!'
+    puts flash[:new]
+    puts '####'
     return unless !flash[:new].nil? && user_signed_in?
 
     save_previous_form
