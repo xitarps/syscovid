@@ -1,4 +1,7 @@
 <h1><%= t(:terms).capitalize %></h1>
 
-<p><%= t(:art).capitalize %>.</p>
-<%= link_to  t(:back).capitalize, '#' %>
+<p><%= raw t(:art_html) %>.</p>
+
+<% unless user_signed_in?%>
+  <p><%= link_to  t(:back).capitalize, root_path %></p> 
+<% end %>

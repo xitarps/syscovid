@@ -16,6 +16,7 @@ pt-BR:
       long: "%A, %d de %B de %Y, %H:%M h"
     am: ''
     pm: ''
+  system_title: 'Syscovid'
   home: 'home'
   hello: 'olá'
   your_email: 'seu email'
@@ -98,7 +99,12 @@ pt-BR:
   user_zip_code: 'cep'
   user: 'usuário'
   terms: termos
-  art: 'art'
+  art_html: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, mauris ultrices feugiat ultricies, justo ligula facilisis felis, quis tristique mauris nibh nec ipsum. Etiam ac dolor elementum, dignissim libero vulputate, volutpat erat. Morbi facilisis, elit et hendrerit aliquet, purus arcu laoreet felis, non euismod est mauris et diam. Donec ex eros, tincidunt quis est vitae, egestas mattis massa. Phasellus viverra justo mi. Curabitur vitae mauris neque. Sed tempor, quam quis tempor semper, ante ex bibendum risus, sit amet facilisis mi odio et orci. Donec egestas interdum gravida. Donec id enim eget est dictum varius. In varius nulla risus, a consectetur augue maximus quis. Curabitur dapibus urna et nisl porta, vitae faucibus nibh condimentum. Praesent ut erat quam. Quisque eget viverra sem, eleifend laoreet nisi. Phasellus vestibulum semper eros.<br>
+    <br>
+    Ut vestibulum at mauris a euismod. Sed eu mi nibh. Ut pulvinar at nisi at sodales. Quisque laoreet auctor dolor in dignissim. Quisque porta ultricies arcu, sed dapibus eros lobortis vel. Sed porttitor orci non est tincidunt, hendrerit suscipit nulla accumsan. Suspendisse potenti. Nullam et libero vel quam sodales euismod viverra ut ex. Maecenas rutrum, nulla sit amet viverra placerat, eros elit venenatis dolor, nec blandit augue tortor non erat. Aenean ultrices ligula et lacinia ornare. Integer ut orci vel ante malesuada bibendum. Etiam in nisl tellus.<br>
+    <br>
+    Fusce rhoncus lacus sit amet tortor gravida consequat. Proin consequat imperdiet porttitor. Nulla porttitor consequat eros at euismod. Curabitur eget ultrices mauris, non dignissim dolor. Curabitur varius lectus non sagittis bibendum. Phasellus id dignissim velit. Nunc ultrices mauris purus, sed tincidunt lacus cursus sit amet. Etiam maximus nibh non sagittis laoreet.
   new_user: 'novo usuario'
   already_registered: 'já sou cadastrado'
   view_terms: 'clique aqui para visualizar os termos'
@@ -183,8 +189,10 @@ pt-BR:
   not_found_in_database: Inválido email ou senha.
   social_distance_research: 'Pesquisa de distanciamento social'
   self_test_covid: 'Auto avaliação(covid-19)'
+  self_test: 'Auto avaliação(covid-19)'
   how_is_my_vicinity: 'Monitoramento de minha região'
   monitoring_page_text: 'Baseado no nº de casos registrados no mesmo CEP:'
+  monitoring: 'monitoramento'
   green_zip_code: 'aparentemente sua região está normal.'
   yellow_zip_code: 'Tem tido crescimento no nº de casos reportados de síndrome viral em sua regiao. Em caso de crescimento do nº de usuarios possivelmente enfermos, haverá alerta. Se possível, procure fazer nova autoavaliação diariamente.'
   red_zip_code: 'Alerta! Redobre os cuidados! Procure não sair de casa desnecessariamente e refazer diariamente a auto avaliação.'

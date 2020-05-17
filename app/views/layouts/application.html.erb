@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Syscovid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title><%= t(:system_title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,9 +11,15 @@
   </head>
 
   <body>
-    <%= javascript_tag "M.toast({html: '#{notice}'}, 4000)" unless notice.nil? %>
-    <%= javascript_tag "M.toast({html: '#{alert}'}, 4000)" unless alert.nil? %>
 
-    <%= yield %>
+    <%= render 'shared/header' if signed_in? %>
+    
+    <div class="container">
+      <%= render 'shared/notice_and_alert'%>
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/footer' if signed_in? %>
+
   </body>
 </html>
