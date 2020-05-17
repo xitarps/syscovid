@@ -20,4 +20,34 @@ require('jquery')
 
 $(document).ready(function(){
   $('.sidenav').sidenav();
+
+  document.addEventListener('turbolinks:before-render', () => {
+    const elem = document.querySelector('.sidenav');
+    const instance = M.Sidenav.getInstance(elem);
+    if (instance) {
+      instance.destroy();
+    }
+
+  });
+
+  document.addEventListener('turbolinks:before-cache', () => {
+    const elem = document.querySelector('.sidenav');
+    const instance = M.Sidenav.getInstance(elem);
+    if (instance) {
+      instance.destroy();
+    }
+
+  });
+
+
+  document.addEventListener('turbolinks:load', () => {
+    $('.sidenav').sidenav();
+
+  });
+
+  document.addEventListener('turbolinks:before-cache', () => {
+    $('.sidenav').sidenav();
+
+  });
+
 });
