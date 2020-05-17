@@ -8,7 +8,7 @@ class SocialDistancesController < ApplicationController
     if user_signed_in? && (@social_distance.user_id = current_user.id)
       generate_flash
       set_zipcode
-      return redirect_to terms_path :index if @social_distance.save
+      return redirect_to users_dashboards_path :index if @social_distance.save
 
     else
       @social_distance.user_id = 1
