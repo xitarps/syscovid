@@ -4,7 +4,7 @@ FactoryBot.define do
     password { '123456' }
     country { 'BR' }
     age { 13 }
-    sequence(:name) { |n| "user-test-#{n} da silva" }
+    name { nil }
     gender { 1 }
     user_zip_code { '01001000' }
   end
