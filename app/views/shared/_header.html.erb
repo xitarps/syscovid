@@ -11,13 +11,8 @@
       
       <ul class="right hide-on-med-and-down">
         
-        <li><%= link_to  t(:social_distance).capitalize, new_social_distance_path %></li>
-        <li><%= link_to  t(:self_test).capitalize, new_self_test_path %></li>
-        <li><%= link_to  t(:monitoring).capitalize, monitoring_path(current_user.id) %></li>
+        <li><%= link_to  t(:dashboard).capitalize, users_dashboards_path %></li>
         <li><%= link_to  t(:terms).capitalize, terms_path %></li>
-
-        <li><a href="#" onclick="return false;">feature futura nav bar desktop</a></li>
-        <li><%= link_to t(:edit_registration).capitalize,edit_user_registration_path %></li>
         <li><%= link_to(t(:logout).capitalize, destroy_user_session_path, method: :delete) %></li>
       </ul>
     </div>
@@ -26,13 +21,11 @@
  
   <ul class="sidenav" id="mobile-demo">
 
+    <li><%= link_to  t(:dashboard).capitalize, users_dashboards_path %></li>
     <li><%= link_to  t(:social_distance).capitalize, new_social_distance_path %></li>
     <li><%= link_to  t(:self_test).capitalize, new_self_test_path %></li>
     <li><%= link_to  t(:monitoring).capitalize, monitoring_path(current_user.id) %></li>
     <li><%= link_to  t(:terms).capitalize, terms_path %></li>
-    
-    <li><a href="#" onclick="return false;">feature futura navbar mobile</a></li>
-
     <li><%= link_to t(:edit_registration).capitalize,edit_user_registration_path %></li>
     <li><%= link_to(t(:logout).capitalize, destroy_user_session_path, method: :delete) %></li>
     

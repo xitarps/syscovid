@@ -1,13 +1,27 @@
-<h2>User Dashboards</h2>
+<h3><%= t(:dashboard).capitalize %></h3>
 
 <% if !flash[:tmp].nil?%>
   <span style='visibility: hidden; display:block; width: 0px ; height: 0px'>form_ok</span> 
 <% end %>
 
-<p><%= t(:user).capitalize %>: <%= current_user.email %><p>
+<div style= 'display: flex; flex-wrap: wrap;'>
+  <div style= ' flex-grow: 1; margin-right: 1em'>
+    <span style= 'font-size:15px;'><%= t(:user).capitalize %>: <%= current_user.email %> </span>
+  </div>
+  <div style= 'flex-grow: 60;'>
+    <%= link_to t(:edit_registration).capitalize,edit_user_registration_path %>
+  </div>
+</div>
 
-<%= link_to t(:logout) ,destroy_user_session_path, method: 'DELETE'%>
+<p><%= t(:dashboard_message_html) %></p>
 
-<p><%= link_to t(:social_distance_research).capitalize, new_social_distance_path %></p>
-<p><%= link_to t(:self_test_covid).capitalize, new_self_test_path %></p>
-<p><%= link_to t(:how_is_my_vicinity).capitalize, monitoring_path(current_user.id) %></p> 
+
+<div style="margin-bottom: 2em;">
+
+  <p><%= link_to t(:social_distance_research).capitalize, new_social_distance_path, style: "min-width: 100%;", class: "waves-effect waves-light  btn-small" %></p>
+
+  <p><%= link_to t(:self_test_covid).capitalize, new_self_test_path, style: "min-width: 100%;", class: "waves-effect waves-light  btn-small" %></p>
+
+  <p><%= link_to t(:how_is_my_vicinity).capitalize, monitoring_path(current_user.id), style: "min-width: 100%;", class: "waves-effect waves-light  btn-small" %></p>
+
+</div>
