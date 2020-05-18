@@ -52,9 +52,9 @@ ActiveRecord::Schema.define(version: 2020_05_16_111508) do
     t.integer "bedrooms"
     t.integer "bathrooms"
     t.integer "rooms"
-    t.integer "many_contacts"
+    t.integer "many_contacts", default: 0
     t.integer "been_outdoor"
-    t.integer "many_times_outdoor"
+    t.integer "many_times_outdoor", default: 0
     t.integer "supermarket"
     t.integer "pharmacy"
     t.integer "health_service"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_111508) do
     t.integer "workplace"
     t.integer "other_places"
     t.integer "public_transportation"
-    t.integer "many_transportations"
+    t.integer "many_transportations", default: 0
     t.integer "bus"
     t.integer "subway"
     t.integer "train"

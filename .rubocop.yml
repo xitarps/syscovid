@@ -29,6 +29,7 @@ AllCops:
     - 'spec/factories/social_distances.rb'
     - 'app/models/country.rb'
     - 'spec/factories/self_tests.rb'
+    - 'spec/requests/user_create_social_distances_spec.rb'
 
 Style/ClassAndModuleChildren:
   Enabled: false
