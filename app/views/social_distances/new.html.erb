@@ -2,7 +2,8 @@
 
 <% if !@social_distance.nil? && @social_distance.errors.any? %>
   <% @social_distance.errors.full_messages.each do |message| %>
-    <p><%= message.capitalize %></p>
+    <p><% message.capitalize %></p>
+    <p><%= javascript_tag "M.toast({html: '#{message.capitalize}'}, 4000)" unless message.nil? %><p>
   <% end %>
 <% end %>
 
@@ -12,7 +13,7 @@
   <%= f.number_field :how_many_residents %>
 
   <%= f.label :residence_type, t(:residence_type).capitalize %>
-  <%= f.select(:residence_type, [[t(:house),0], [t(:apartment),1], [t(:others),2]], {include_blank: 'Tipo de moradia'}, { :style => 'display: block; margin-top: 0em;' }) %>
+  <%= f.select(:residence_type, [[t(:house),0], [t(:apartment),1], [t(:others),2]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
 
   <%= f.label :bedrooms, t(:how_many_bedrooms).capitalize %>
   <%= f.number_field :bedrooms %>
@@ -29,148 +30,208 @@
   <%= f.label :been_outdoor , t(:been_outdoor).capitalize do %>
     <%= t(:been_outdoor).capitalize %>
     <br>
-    <%= f.check_box :been_outdoor, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :many_times_outdoor, t(:many_times_outdoor).capitalize %>
-  <%= f.number_field :many_times_outdoor %>
-
-  <p><%= f.label '', t(:where).capitalize %></p>
-
-  <%= f.label :supermarket , t(:supermarket).capitalize do %>
-    <%= t(:supermarket).capitalize %>
-    <br>
-    <%= f.check_box :supermarket, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :pharmacy , t(:pharmacy).capitalize do %>
-    <%= t(:pharmacy).capitalize %>
-    <br>
-    <%= f.check_box :pharmacy, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :health_service , t(:health_service).capitalize do %>
-    <%= t(:health_service).capitalize %>
-    <br>
-    <%= f.check_box :health_service, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :commerce , t(:commerce).capitalize do %>
-    <%= t(:commerce).capitalize %>
-    <br>
-    <%= f.check_box :commerce, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :market , t(:market).capitalize do %>
-    <%= t(:market).capitalize %>
-    <br>
-    <%= f.check_box :market, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :workplace , t(:workplace).capitalize do %>
-    <%= t(:workplace).capitalize %>
-    <br>
-    <%= f.check_box :workplace, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :other_places , t(:other_places).capitalize do %>
-    <%= t(:other_places).capitalize %>
-    <br>
-    <%= f.check_box :other_places, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
-
-  <%= f.label :public_transportation , t(:public_transportation).capitalize do %>
-    <%= t(:public_transportation).capitalize %>
-    <br>
-    <%= f.check_box :public_transportation, type:"checkbox" %>
+    <% if !params[:social_distance].nil? && params[:social_distance][:been_outdoor] == '1'%>
+      <%= f.check_box :been_outdoor, type:"checkbox", checked: true %>
+    <% else %>
+      <%= f.check_box :been_outdoor, type:"checkbox", checked: false %>
+    <% end %>
     <span>
   <% end%>
   <br>
   
-  <%= f.label :many_transportations, t(:many_transportations).capitalize %>
-  <%= f.number_field :many_transportations %>
+  <% if !params[:social_distance].nil? && params[:social_distance][:been_outdoor] == '1'%>
+    <span id='hide_all_under_if_fine' style="display: block; visibility: visible;">
+  <% else %>
+    <span id='hide_all_under_if_fine' style="display: none; visibility: hidden;">
+  <% end %>
 
-  <p><%= f.label '', t(:transport_type).capitalize %></p>
+    <%= f.label :many_times_outdoor, t(:many_times_outdoor).capitalize %>
+    <%= f.number_field :many_times_outdoor %>
 
-  <%= f.label :bus , t(:bus).capitalize do %>
-    <%= t(:bus).capitalize %>
+    <p><%= f.label '', t(:where).capitalize %></p>
+
+    <%= f.label :supermarket , t(:supermarket).capitalize do %>
+      <%= t(:supermarket).capitalize %>
+      <br>
+      <%= f.check_box :supermarket, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :bus, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :subway , t(:subway).capitalize do %>
-    <%= t(:subway).capitalize %>
+    <%= f.label :pharmacy , t(:pharmacy).capitalize do %>
+      <%= t(:pharmacy).capitalize %>
+      <br>
+      <%= f.check_box :pharmacy, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :subway, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :train , t(:train).capitalize do %>
-    <%= t(:train).capitalize %>
+    <%= f.label :health_service , t(:health_service).capitalize do %>
+      <%= t(:health_service).capitalize %>
+      <br>
+      <%= f.check_box :health_service, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :train, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :transport_apps , t(:transport_apps).capitalize do %>
-    <%= t(:transport_apps).capitalize %>
+    <%= f.label :commerce , t(:commerce).capitalize do %>
+      <%= t(:commerce).capitalize %>
+      <br>
+      <%= f.check_box :commerce, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :transport_apps, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :car , t(:car).capitalize do %>
-    <%= t(:car).capitalize %>
+    <%= f.label :market , t(:market).capitalize do %>
+      <%= t(:market).capitalize %>
+      <br>
+      <%= f.check_box :market, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :car, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :bicycle , t(:bicycle).capitalize do %>
-    <%= t(:bicycle).capitalize %>
+    <%= f.label :workplace , t(:workplace).capitalize do %>
+      <%= t(:workplace).capitalize %>
+      <br>
+      <%= f.check_box :workplace, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :bicycle, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :taxi , t(:taxi).capitalize do %>
-    <%= t(:taxi).capitalize %>
+    <%= f.label :other_places , t(:other_places).capitalize do %>
+      <%= t(:other_places).capitalize %>
+      <br>
+      <%= f.check_box :other_places, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :taxi, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
 
-  <%= f.label :other_transportations , t(:other_transportations).capitalize do %>
-    <%= t(:other_transportations).capitalize %>
+    <%= f.label :public_transportation , t(:public_transportation).capitalize do %>
+      <%= t(:public_transportation).capitalize %>
+      <br>
+      <%= f.check_box :public_transportation, type:"checkbox" %>
+      <span>
+    <% end%>
     <br>
-    <%= f.check_box :other_transportations, type:"checkbox" %>
-    <span>
-  <% end%>
-  <br>
+    
+    <%= f.label :many_transportations, t(:many_transportations).capitalize %>
+    <%= f.number_field :many_transportations %>
+
+    <p><%= f.label '', t(:transport_type).capitalize %></p>
+
+    <%= f.label :bus , t(:bus).capitalize do %>
+      <%= t(:bus).capitalize %>
+      <br>
+      <%= f.check_box :bus, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :subway , t(:subway).capitalize do %>
+      <%= t(:subway).capitalize %>
+      <br>
+      <%= f.check_box :subway, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :train , t(:train).capitalize do %>
+      <%= t(:train).capitalize %>
+      <br>
+      <%= f.check_box :train, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :transport_apps , t(:transport_apps).capitalize do %>
+      <%= t(:transport_apps).capitalize %>
+      <br>
+      <%= f.check_box :transport_apps, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :car , t(:car).capitalize do %>
+      <%= t(:car).capitalize %>
+      <br>
+      <%= f.check_box :car, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :bicycle , t(:bicycle).capitalize do %>
+      <%= t(:bicycle).capitalize %>
+      <br>
+      <%= f.check_box :bicycle, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :taxi , t(:taxi).capitalize do %>
+      <%= t(:taxi).capitalize %>
+      <br>
+      <%= f.check_box :taxi, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+
+    <%= f.label :other_transportations , t(:other_transportations).capitalize do %>
+      <%= t(:other_transportations).capitalize %>
+      <br>
+      <%= f.check_box :other_transportations, type:"checkbox" %>
+      <span>
+    <% end%>
+    <br>
+    
+  </span>
+
 
   <%= f.submit t(:save).capitalize %>
 <% end %>
+
+<script>
+  let element = document.querySelector('#social_distance_been_outdoor')
+  let my_span = document.querySelector('#hide_all_under_if_fine')
+  let many_times_outdoor = document.querySelector('#social_distance_many_times_outdoor')
+  let many_transportations = document.querySelector('#social_distance_many_transportations')
+
+  element.addEventListener('change', (e)=>{
+    
+
+    if(my_span.style.visibility == 'visible' || !my_span.style.visibility){
+      my_span.style.display= 'block';
+      my_span.style.visibility= 'hidden';
+      my_span.style.widht= '0px';
+      my_span.style.height= '0px';
+
+
+      reset_value(many_times_outdoor)
+      reset_value(many_transportations)
+
+    }else{
+      my_span.style.display= 'block';
+      my_span.style.visibility= 'visible';
+      my_span.style.widht= 'auto';
+      my_span.style.height= 'auto';
+    }
+  })
+
+  cannot_be_negative_list = document.querySelectorAll('input[type=number]')
+  
+  not_negative(cannot_be_negative_list)
+  
+  function not_negative(list){
+    list.forEach((element)=>{
+      if(element.value < 0 )element.value = 0;
+      element.addEventListener('change', (e)=>{
+        if(element.value < 0 ){
+          element.value = 0
+        }
+      });
+    });
+  }
+
+  function reset_value(element){
+    element.value = 0
+  }
+</script>
