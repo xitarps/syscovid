@@ -1,7 +1,24 @@
-<h2><%= t(:results_page).capitalize %></h2>
+<h3><%= t(:results_page).capitalize %></h3>
 
-<p><%= t(:results_page_msg).capitalize %><p>
+<div style="margin-bottom: 2em; margin-top: 2em">
+  <%= raw t(:results_page_msg_html) %>
+</div>
 
-<%=  @alert.capitalize   %>
+<div class="progress" style='width: 100%; margin: 3em 0'>
+  <div class="indeterminate"></div>
+</div>
 
-<p><%= link_to t(:back).capitalize, users_dashboards_path %></p>
+<div class="card-panel" style="baseline; margin: 2em 0; padding: 1em;">
+  <div style="font-size: 15px;", class="<%= @alert_color %>"> 
+    <div style='display: flex; align-items: center;';>
+
+      <div style='flex-grow: 3;'> 
+        <a class="btn-floating btn-large pulse white" ><i class="material-icons <%= @alert_color %>" >add_alert</i></a>
+      </div> 
+      
+      <div style='flex-grow: 4;'> 
+        <%= @alert.capitalize %> 
+      </div> 
+    </div>
+  </div>
+</div>

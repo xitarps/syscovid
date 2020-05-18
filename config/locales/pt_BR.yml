@@ -214,7 +214,8 @@ pt-BR:
   still_getting_infos: 'Estamos captando esses dados, não se preocupe.'
   please_come_back_later: 'Favor, tentar novamente mais tarde'
   results_page: 'pagina de resultados'
-  results_page_msg: 'estamos monitorando a sua regiao. Caso haja indicios de crescimento do numero de usuarios sintomaticos de sindrome gripal, havera um alerta.'
+  results_page_msg_html: |
+    Estamos monitorando a sua regiao. Caso haja indicios de crescimento do numero de usuarios sintomaticos de sindrome gripal, havera um alerta.
   alert_fine: 'aparentemente voce esta bem. Lembre-se de lavar as maos...'
   alert_attention: 'procure/mantenha consultas com medico. Lembre-se de lavar as maos...'
   alert_critical: 'procure um hospital...'
