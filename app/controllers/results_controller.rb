@@ -24,7 +24,7 @@ class ResultsController < ApplicationController
   def define_message_color
     return 'grey-text text-darken-3' if @self_test.nil?
     return 'green-text text-accent-4' if @self_test.result.to_i.zero?
-    return 'orange-text text-accent-3' if @self_test.result == 1
-    return 'deep-orange-text text-accent-3' if @self_test.result == 2
+    return 'amber-text text-darken-4' if @self_test.result == 1
+    return 'red-text text-accent-4' if @self_test.result == 2
   end
 end
