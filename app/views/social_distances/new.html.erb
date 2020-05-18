@@ -1,4 +1,5 @@
-<h2><%= t(:social_distance).capitalize %></h2>
+
+  <h3><%= t(:social_distance).capitalize %></h3>
 
 <% if !@social_distance.nil? && @social_distance.errors.any? %>
   <% @social_distance.errors.full_messages.each do |message| %>
@@ -8,36 +9,48 @@
 <% end %>
 
 <%= form_with url: social_distances_path, model: @social_distance, method: 'POST', local: true do |f| %>
+  <p>
+    <%= f.label :how_many_residents, t(:how_many_residents).capitalize %>
+    <%= f.number_field :how_many_residents %>
+  </p>
 
-  <%= f.label :how_many_residents, t(:how_many_residents).capitalize %>
-  <%= f.number_field :how_many_residents %>
+  <p>
+    <%= f.label :residence_type, t(:residence_type).capitalize %>
+    <%= f.select(:residence_type, [[t(:house),0], [t(:apartment),1], [t(:others),2]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
+  </p>
 
-  <%= f.label :residence_type, t(:residence_type).capitalize %>
-  <%= f.select(:residence_type, [[t(:house),0], [t(:apartment),1], [t(:others),2]], {}, { :style => 'display: block; margin-top: 0em;' }) %>
+  <p>
+    <%= f.label :bedrooms, t(:how_many_bedrooms).capitalize %>
+    <%= f.number_field :bedrooms %>
+  </p>
 
-  <%= f.label :bedrooms, t(:how_many_bedrooms).capitalize %>
-  <%= f.number_field :bedrooms %>
+  <p>
+    <%= f.label :bathrooms, t(:how_many_bathrooms).capitalize %>
+    <%= f.number_field :bathrooms %>
+  </p>
 
-  <%= f.label :bathrooms, t(:how_many_bathrooms).capitalize %>
-  <%= f.number_field :bathrooms %>
+  <p>
+    <%= f.label :rooms, t(:how_many_rooms).capitalize %>
+    <%= f.number_field :rooms %>
+  </p>
 
-  <%= f.label :rooms, t(:how_many_rooms).capitalize %>
-  <%= f.number_field :rooms %>
+  <p>
+    <%= f.label :many_contacts, t(:many_contacts).capitalize %>
+    <%= f.number_field :many_contacts %>
+  </p>
 
-  <%= f.label :many_contacts, t(:many_contacts).capitalize %>
-  <%= f.number_field :many_contacts %>
-
-  <%= f.label :been_outdoor , t(:been_outdoor).capitalize do %>
-    <%= t(:been_outdoor).capitalize %>
-    <br>
-    <% if !params[:social_distance].nil? && params[:social_distance][:been_outdoor] == '1'%>
-      <%= f.check_box :been_outdoor, type:"checkbox", checked: true %>
-    <% else %>
-      <%= f.check_box :been_outdoor, type:"checkbox", checked: false %>
-    <% end %>
-    <span>
-  <% end%>
-  <br>
+  <p>
+    <%= f.label :been_outdoor , t(:been_outdoor).capitalize do %>
+      <%= t(:been_outdoor).capitalize %>
+      <br>
+      <% if !params[:social_distance].nil? && params[:social_distance][:been_outdoor] == '1'%>
+        <%= f.check_box :been_outdoor, type:"checkbox", checked: true %>
+      <% else %>
+        <%= f.check_box :been_outdoor, type:"checkbox", checked: false %>
+      <% end %>
+  <span>
+    <% end%>
+  </p>
   
   <% if !params[:social_distance].nil? && params[:social_distance][:been_outdoor] == '1'%>
     <span id='hide_all_under_if_fine' style="display: block; visibility: visible;">
@@ -45,66 +58,90 @@
     <span id='hide_all_under_if_fine' style="display: none; visibility: hidden;">
   <% end %>
 
-    <%= f.label :many_times_outdoor, t(:many_times_outdoor).capitalize %>
-    <%= f.number_field :many_times_outdoor %>
 
-    <p><%= f.label '', t(:where).capitalize %></p>
+  <%= f.label :many_times_outdoor, t(:many_times_outdoor).capitalize %>
+  <%= f.number_field :many_times_outdoor %>
 
-    <%= f.label :supermarket , t(:supermarket).capitalize do %>
-      <%= t(:supermarket).capitalize %>
-      <br>
-      <%= f.check_box :supermarket, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :pharmacy , t(:pharmacy).capitalize do %>
-      <%= t(:pharmacy).capitalize %>
-      <br>
-      <%= f.check_box :pharmacy, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :health_service , t(:health_service).capitalize do %>
-      <%= t(:health_service).capitalize %>
-      <br>
-      <%= f.check_box :health_service, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+    <div style="display: flex; flex-wrap: wrap;">
 
-    <%= f.label :commerce , t(:commerce).capitalize do %>
-      <%= t(:commerce).capitalize %>
-      <br>
-      <%= f.check_box :commerce, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+      <p style="min-width: 100%; margin: 2em 0 0 0; flex-grow: 1;">
+        <%= f.label '', t(:where).capitalize, style: 'flex-grow:1' %>
+      </p>
 
-    <%= f.label :market , t(:market).capitalize do %>
-      <%= t(:market).capitalize %>
-      <br>
-      <%= f.check_box :market, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :supermarket , t(:supermarket).capitalize do %>
+          <%= t(:supermarket).capitalize %>
+          <br>
+          <%= f.check_box :supermarket, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
 
-    <%= f.label :workplace , t(:workplace).capitalize do %>
-      <%= t(:workplace).capitalize %>
-      <br>
-      <%= f.check_box :workplace, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :pharmacy , t(:pharmacy).capitalize do %>
+          <%= t(:pharmacy).capitalize %>
+          <br>
+          <%= f.check_box :pharmacy, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
 
-    <%= f.label :other_places , t(:other_places).capitalize do %>
-      <%= t(:other_places).capitalize %>
-      <br>
-      <%= f.check_box :other_places, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :health_service , t(:health_service).capitalize do %>
+          <%= t(:health_service).capitalize %>
+          <br>
+          <%= f.check_box :health_service, type:"checkbox" %>
+          <span>
+        <% end%>
+        <br>
+      </p>
+
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :commerce , t(:commerce).capitalize do %>
+          <%= t(:commerce).capitalize %>
+          <br>
+          <%= f.check_box :commerce, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :market , t(:market).capitalize do %>
+          <%= t(:market).capitalize %>
+          <br>
+          <%= f.check_box :market, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :workplace , t(:workplace).capitalize do %>
+          <%= t(:workplace).capitalize %>
+          <br>
+          <%= f.check_box :workplace, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 6.8em; margin-right: 0vw;">
+        <%= f.label :other_places , t(:other_places).capitalize do %>
+          <%= t(:other_places).capitalize %>
+          <br>
+          <%= f.check_box :other_places, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+    </div>
+
+
+
+
+
+
+
 
     <%= f.label :public_transportation , t(:public_transportation).capitalize do %>
       <%= t(:public_transportation).capitalize %>
@@ -112,81 +149,105 @@
       <%= f.check_box :public_transportation, type:"checkbox" %>
       <span>
     <% end%>
-    <br>
     
-    <%= f.label :many_transportations, t(:many_transportations).capitalize %>
-    <%= f.number_field :many_transportations %>
+    <p>
+      <%= f.label :many_transportations, t(:many_transportations).capitalize %>
+      <%= f.number_field :many_transportations %>
+    </p>
 
-    <p><%= f.label '', t(:transport_type).capitalize %></p>
 
-    <%= f.label :bus , t(:bus).capitalize do %>
-      <%= t(:bus).capitalize %>
-      <br>
-      <%= f.check_box :bus, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :subway , t(:subway).capitalize do %>
-      <%= t(:subway).capitalize %>
-      <br>
-      <%= f.check_box :subway, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :train , t(:train).capitalize do %>
-      <%= t(:train).capitalize %>
-      <br>
-      <%= f.check_box :train, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :transport_apps , t(:transport_apps).capitalize do %>
-      <%= t(:transport_apps).capitalize %>
-      <br>
-      <%= f.check_box :transport_apps, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :car , t(:car).capitalize do %>
-      <%= t(:car).capitalize %>
-      <br>
-      <%= f.check_box :car, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
 
-    <%= f.label :bicycle , t(:bicycle).capitalize do %>
-      <%= t(:bicycle).capitalize %>
-      <br>
-      <%= f.check_box :bicycle, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+    <div style="display: flex; flex-wrap: wrap;">
 
-    <%= f.label :taxi , t(:taxi).capitalize do %>
-      <%= t(:taxi).capitalize %>
-      <br>
-      <%= f.check_box :taxi, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+      <p style="min-width: 100%; margin: 2em 0 0 0; flex-grow: 1;">
+        <%= f.label '', t(:transport_type).capitalize %>
+      </p>
 
-    <%= f.label :other_transportations , t(:other_transportations).capitalize do %>
-      <%= t(:other_transportations).capitalize %>
-      <br>
-      <%= f.check_box :other_transportations, type:"checkbox" %>
-      <span>
-    <% end%>
-    <br>
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :bus , t(:bus).capitalize do %>
+          <%= t(:bus).capitalize %>
+          <br>
+          <%= f.check_box :bus, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :subway , t(:subway).capitalize do %>
+          <%= t(:subway).capitalize %>
+          <br>
+          <%= f.check_box :subway, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :train , t(:train).capitalize do %>
+          <%= t(:train).capitalize %>
+          <br>
+          <%= f.check_box :train, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :transport_apps , t(:transport_apps).capitalize do %>
+          <%= t(:transport_apps).capitalize %>
+          <br>
+          <%= f.check_box :transport_apps, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :car , t(:car).capitalize do %>
+          <%= t(:car).capitalize %>
+          <br>
+          <%= f.check_box :car, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :bicycle , t(:bicycle).capitalize do %>
+          <%= t(:bicycle).capitalize %>
+          <br>
+          <%= f.check_box :bicycle, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :taxi , t(:taxi).capitalize do %>
+          <%= t(:taxi).capitalize %>
+          <br>
+          <%= f.check_box :taxi, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+
+      <p style="min-width: 7.4em; margin-right: 1vw;">
+        <%= f.label :other_transportations , t(:other_transportations).capitalize do %>
+          <%= t(:other_transportations).capitalize %>
+          <br>
+          <%= f.check_box :other_transportations, type:"checkbox" %>
+          <span>
+        <% end%>
+      </p>
+    </div>
     
   </span>
 
 
-  <%= f.submit t(:save).capitalize %>
+  
+
+  <div class='row center' style="margin-top: 2em;">
+    <%= f.button t(:save).capitalize, class: "white-text actions btn-large waves-effect" %>
+  </div>
 <% end %>
 
 <script>
