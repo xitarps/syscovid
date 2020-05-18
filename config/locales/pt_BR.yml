@@ -16,6 +16,11 @@ pt-BR:
       long: "%A, %d de %B de %Y, %H:%M h"
     am: ''
     pm: ''
+  special_card_title: 'Comunicado'
+  special_card_html: |
+    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus, mi eu fringilla pulvinar, ante tellus interdum ipsum, sed tincidunt leo lectus in lectus. Duis vehicula leo sed diam congue rutrum. Nam quam urna, finibus et porta id, tempus non metus. Pellentesque venenatis faucibus enim, et eleifend ante viverra id. Nunc viverra ante in vulputate fermentum. Etiam imperdiet aliquam dolor, non accumsan orci elementum in. Sed quis feugiat erat. Etiam ut egestas tortor. Nam et ultricies ex. Aliquam auctor nulla ut condimentum scelerisque. Nunc ultrices sed orci vitae finibus. Integer ac scelerisque ex.</p>
+    <br>
+    <p>    Praesent vel molestie elit, et tempus velit. Quisque eu dui magna. Vestibulum vel elit malesuada,venenatis lectus nec, porta metus. Nullam commodo ligula vel ultricies lacinia. Nullam tincidunt placerat sapien, ac dignissim justo ultricies et. Curabitur dignissim ac sapien nec varius. Nunc semper consequat felis a condimentum. Donec fringilla sit amet augue et lacinia. Pellentesque leo odio, blandit quis tincidunt at, sollicitudin eu lectus. Pellentesque id dapibus quam, in aliquam augue.</p> 
   system_title: 'Syscovid'
   home: 'home'
   hello: 'olá'
@@ -182,6 +187,7 @@ pt-BR:
   other_symptoms: 'outros sintomas'
   no_additional_symptoms: 'nao tenho sintomas adicionais'
   health_service_unit: 'UBS/SUS'
+  where_health_services: 'Unidades SUS'
   clinic: 'consultorio'
   ambulatory: 'ambulatorio'
   emergency_room: 'pronto socorro'
@@ -199,7 +205,7 @@ pt-BR:
   self_test_covid: 'Auto avaliação(covid-19)'
   self_test: 'Auto avaliação(covid-19)'
   how_is_my_vicinity: 'Monitoramento de minha região'
-  monitoring_page_text: 'Baseado no nº de casos registrados no mesmo CEP:'
+  monitoring_page_text: 'Baseado no nº de casos em seu CEP:'
   monitoring: 'monitoramento'
   green_zip_code: 'aparentemente sua região está normal.'
   yellow_zip_code: 'Tem tido crescimento no nº de casos reportados de síndrome viral em sua regiao. Em caso de crescimento do nº de usuarios possivelmente enfermos, haverá alerta. Se possível, procure fazer nova autoavaliação diariamente.'
@@ -216,6 +222,7 @@ pt-BR:
   ops_something_wrong: 'ops... algo deu errado'
   name_ivalid: 'nome invalido'
   gender_invalid: 'genero invalido'
+  where_to_go: 'http://buscasaude.prefeitura.sp.gov.br/'
   dashboard: 'dashboard'
   errors:
       messages:
