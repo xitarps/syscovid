@@ -12,7 +12,7 @@ feature 'view results page' do
       
       # Assert
       expect(page).to have_content(I18n.t(:results_page).capitalize)
-      expect(page).to have_content(I18n.t(:results_page_msg).capitalize)
+      expect(page).to have_content(I18n.t(:results_page_msg_html))
     end
 
     it 'failure' do
@@ -23,7 +23,7 @@ feature 'view results page' do
       
       # Assert
       expect(page).not_to have_content(I18n.t(:results_page).capitalize)
-      expect(page).not_to have_content(I18n.t(:results_page_msg).capitalize)
+      expect(page).not_to have_content(I18n.t(:results_page_msg_html))
     end
   end
 
