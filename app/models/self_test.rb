@@ -2,7 +2,7 @@ class SelfTest < ApplicationRecord
   belongs_to :user, optional: true
 
   @checked_message = " - #{I18n.t(:checked_message).capitalize}"
-  @blank_message = " - #{I18n.t(:blank).capitalize}"
+  @invalid = " - #{I18n.t(:checked_message).capitalize}"
 
   validates :self_test_zip_code, presence: true
 
@@ -32,7 +32,7 @@ class SelfTest < ApplicationRecord
                             message: @checked_message }
   validates :how_long_feeling,
   presence: true, format: { with: /\A[0-2]\z/,
-                            message: @blank_message }
+                            message: @invalid_message }
   validates :diabetes,
   presence: true, format: { with: /\A[0-1]\z/,
                             message: @checked_message }
@@ -80,5 +80,5 @@ class SelfTest < ApplicationRecord
                             message: @checked_message }
   validates :covid_test,
   presence: true, format: { with: /\A[0-2]\z/,
-                            message: @blank_message }
+                            message: @invalid_message }
 end
