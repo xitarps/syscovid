@@ -22,7 +22,7 @@ pt-BR:
     <br>
     <p>    Praesent vel molestie elit, et tempus velit. Quisque eu dui magna. Vestibulum vel elit malesuada,venenatis lectus nec, porta metus. Nullam commodo ligula vel ultricies lacinia. Nullam tincidunt placerat sapien, ac dignissim justo ultricies et. Curabitur dignissim ac sapien nec varius. Nunc semper consequat felis a condimentum. Donec fringilla sit amet augue et lacinia. Pellentesque leo odio, blandit quis tincidunt at, sollicitudin eu lectus. Pellentesque id dapibus quam, in aliquam augue.</p> 
   system_title: 'Syscovid'
-  home: 'home'
+  home: 'Home - SysCovid'
   hello: 'olá'
   your_email: 'seu email'
   your_zip_code: 'seu cep'
@@ -118,9 +118,12 @@ pt-BR:
     <br>
     Fusce rhoncus lacus sit amet tortor gravida consequat. Proin consequat imperdiet porttitor. Nulla porttitor consequat eros at euismod. Curabitur eget ultrices mauris, non dignissim dolor. Curabitur varius lectus non sagittis bibendum. Phasellus id dignissim velit. Nunc ultrices mauris purus, sed tincidunt lacus cursus sit amet. Etiam maximus nibh non sagittis laoreet.
   new_user: 'novo usuario'
-  already_registered: 'já sou cadastrado'
+  already_registered: 'já cadastrado'
   view_terms: 'clique aqui para visualizar os termos'
-  about_site: 'Texto sobre o site...'
+  about_site_html: |
+    Texto sobre o site...
+    <br><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper sollicitudin ex, vel tempor mi pulvinar nec. Suspendisse potenti. Aliquam facilisis ullamcorper tortor bibendum sodales. Pellentesque sed arcu felis. Integer blandit velit vitae nibh imperdiet, a blandit risus ornare. Donec sed felis aliquam, pellentesque erat sit amet, eleifend nibh. Sed sollicitudin risus a luctus dignissim. Sed cursus mauris sit amet lacinia dapibus. Etiam mattis metus non orci pulvinar vulputate. Proin mollis hendrerit tellus, euismod malesuada libero mattis sed. Quisque sollicitudin vel nulla vitae finibus. Pellentesque eu volutpat turpis, id auctor sapien. Nullam bibendum urna est, id dignissim massa efficitur eu.
   how_many_residents: 'numero de pessoas na sua casa'
   residence_type: 'tipo de moradia'
   house: 'casa'
