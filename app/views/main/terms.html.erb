@@ -1,7 +1,11 @@
 <h1><%= t(:terms).capitalize %></h1>
 
-<p><%= raw t(:art_html) %>.</p>
+<div style= 'margin-bottom: 2em;'>
 
-<% unless user_signed_in?%>
-  <p><%= link_to  t(:back).capitalize, root_path %></p> 
-<% end %>
+  <p><%= raw t(:art_html) %>.</p>
+
+  <% unless user_signed_in?%>
+    <p><%= link_to  t(:back).capitalize, root_path %></p> 
+  <% end %>
+
+</div>
