@@ -6,13 +6,13 @@ class SocialDistancesController < ApplicationController
 
   def create
     if user_signed_in? && (@social_distance.user_id = current_user.id)
-      generate_flash
       set_zipcode
+      negative_and_flash
       return redirect_to users_dashboards_path :index if @social_distance.save
 
     else
       @social_distance.user_id = 1
-      generate_flash
+      negative_and_flash
       return redirect_to new_user_registration_path if @social_distance.valid?
 
     end
@@ -50,5 +50,18 @@ class SocialDistancesController < ApplicationController
 
   def set_zipcode
     @social_distance.social_distance_zip_code = current_user.user_zip_code
+  end
+
+  def protect_from_negative
+    return if @social_distance.many_transportations.nil?
+
+    is_checked = @social_distance.public_transportation == 1
+    is_negative = @social_distance.many_transportations < 1
+    @social_distance.many_transportations = -1 if is_checked && is_negative
+  end
+
+  def negative_and_flash
+    generate_flash
+    protect_from_negative
   end
 end
