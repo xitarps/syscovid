@@ -107,6 +107,8 @@ pt-BR:
   country: 'nacionalidade'
   user_zip_code: 'cep'
   user: 'usuário'
+  male: 'masculino'
+  female: 'feminino'
   terms: termos
   dashboard_message_html: |
      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, mauris ultrices feugiat ultricies, justo ligula facilisis felis, quis tristique mauris nibh nec ipsum. Etiam ac dolor elementum, dignissim libero vulputate, volutpat erat. Morbi facilisis, elit et hendrerit aliquet, purus arcu laoreet felis, non euismod est mauris et diam. Donec ex eros, tincidunt quis est vitae, egestas mattis massa. Phasellus viverra justo mi.
