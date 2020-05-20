@@ -32,7 +32,7 @@
 
   <div>
     <%= f.label :country, t(:country).capitalize %><br/>
-    <%= f.select(:country, @countries, {include_blank: t(:choose_country)}, { :style => 'display: block; margin-top: 0em;' }) %>
+    <%= f.select(:country, @countries, {include_blank: t(:choose_country),selected: 'BR'}, { :style => 'display: block; margin-top: 0em;' }) %>
   </div>
 
   <div>
